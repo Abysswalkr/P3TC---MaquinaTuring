@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maquina-turing-sim"
+version = "0.1.0"
+description = "Simulador de Maquinas de Turing para el Proyecto 3 de Teoria de la Computacion"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Equipo Proyecto 3" }
+]
+dependencies = [
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3",
+]
+
+[project.scripts]
+tmsim = "tmsim.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
